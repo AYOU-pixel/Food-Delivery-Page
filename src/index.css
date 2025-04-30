@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 10% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 13%;
+
+    --primary: 0 100% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 120 61% 50%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 37 100% 70%;
+    --accent-foreground: 220 10% 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-neutral-light text-dark-charcoal font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-semibold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+  
+  .section {
+    @apply py-8 md:py-12 lg:py-16;
+  }
+  
+  .btn-primary {
+    @apply bg-tomato-red hover:bg-opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-dark-charcoal font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-sm border border-gray-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .category-card {
+    @apply flex flex-col items-center justify-center px-4 py-5 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer;
+  }
+  
+  .restaurant-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-200;
+  }
+}
