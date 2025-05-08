@@ -10,7 +10,7 @@ interface PromotionCardProps {
 }
 
 const PromotionCard = memo(({ title, description, image, color }: PromotionCardProps) => {
-  return (
+    return (
     <div 
       className={`rounded-2xl overflow-hidden shadow-lg transition-shadow hover:shadow-xl ${color} h-full`}
       style={{ WebkitTapHighlightColor: 'transparent' }}
